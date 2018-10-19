@@ -4,6 +4,7 @@
 <?import com.jfoenix.controls.JFXListView?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -28,29 +29,32 @@
             <JFXButton fx:id="generar_examen_btn" onAction="#generarExamen" prefHeight="27.0" prefWidth="155.0" text="GENERAR EXAMEN" textFill="WHITE" BorderPane.alignment="CENTER" />
          </right>
       </JFXToolbar>
-      <JFXTabPane layoutY="49.0" prefHeight="351.0" prefWidth="600.0">
+      <JFXTabPane fx:id="tabpane_tabs" blendMode="SRC_ATOP" depthTest="ENABLE" layoutY="50.0" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="350.0" prefWidth="600.0" stylesheets="@styles.css" tabClosingPolicy="ALL_TABS" tabMaxHeight="100.0" tabMaxWidth="600.0" tabMinWidth="600.0">
          <tabs>
-            <Tab fx:id="clasestab_tab" text="Clases">
+            <Tab fx:id="reactivostab_tab" closable="false" text="Reactivos">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <JFXListView fx:id="clasesList_listview" prefHeight="373.0" prefWidth="600.0" />
-                        <JFXButton fx:id="add_class_btn" buttonType="RAISED" layoutX="497.0" layoutY="273.0" onAction="#agregarClase" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: #004bdc#004bdc;" text="+CLASE" textFill="WHITE" />
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
-            <Tab fx:id="reactivostab_tab" text="Reactivos">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <JFXListView fx:id="reactivosList_listview" prefHeight="400.0" prefWidth="600.0" />
+                        <JFXListView fx:id="reactivosList_listview" prefHeight="317.0" prefWidth="600.0" />
                         <JFXButton fx:id="add_reactivo_btn" buttonType="RAISED" layoutX="480.0" layoutY="273.0" onAction="#agregarReactivo" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #004bdc#004bdc;" text="+REACTIVO" textFill="WHITE" />
                      </children>
                   </AnchorPane>
               </content>
             </Tab>
+            <Tab fx:id="clasestab_tab" text="Clases">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXListView fx:id="clasesList_listview" prefHeight="317.0" prefWidth="600.0" />
+                        <JFXButton fx:id="add_class_btn" buttonType="RAISED" layoutX="23.0" layoutY="271.0" onAction="#agregarClase" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: #004bdc#004bdc;" text="+CLASE" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
          </tabs>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
       </JFXTabPane>
    </children>
 </AnchorPane>

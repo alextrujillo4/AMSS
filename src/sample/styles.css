@@ -1,0 +1,33 @@
+/*
+    The tab bar
+*/
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #fff;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #fff;
+}
+
+.jfx-tab-pane .tab-selected-line {
+    -fx-background-color: #004bdc;
+}
+
+.jfx-tab-pane {
+    -fx-tab-min-width:200px;
+    -fx-tab-max-width:200px;
+    -fx-alignment: CENTER;
+  }
+
+  .jfx-tab-pane .tab
+{
+-fx-padding:0 0 0 100;
+}
+
+/*TAB*/
+.tab .tab-label {  
+    -fx-alignment: CENTER;
+
+    -fx-skin: "com.sun.javafx.scene.control.skin.LabelSkin";
+-fx-text-fill: -fx-text-base-color;
+  -fx-font-size: 13;
+}

@@ -21,7 +21,7 @@ import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Clases implements Initializable {
+public class ClasesScene implements Initializable {
 
 
     @FXML

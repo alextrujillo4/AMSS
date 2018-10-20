@@ -12,7 +12,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="myApp_pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Clases">
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<AnchorPane fx:id="myApp_pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ClasesScene">
    <children>
       <JFXToolbar prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #004bdc#004bdc;">
          <effect>
@@ -23,12 +24,15 @@
                <font>
                   <Font name="Google Sans Medium" size="14.0" />
                </font>
+
             </Text>
+
          </left>
          <right>
             <JFXButton fx:id="generar_examen_btn" onAction="#generarExamen" prefHeight="27.0" prefWidth="155.0" text="GENERAR EXAMEN" textFill="WHITE" BorderPane.alignment="CENTER" />
          </right>
       </JFXToolbar>
+
       <JFXTabPane fx:id="tabpane_tabs" blendMode="SRC_ATOP" depthTest="ENABLE" layoutY="50.0" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="350.0" prefWidth="600.0" stylesheets="@styles.css" tabClosingPolicy="ALL_TABS" tabMaxHeight="100.0" tabMaxWidth="600.0" tabMinWidth="600.0">
          <tabs>
             <Tab fx:id="reactivostab_tab" closable="false" text="Reactivos">

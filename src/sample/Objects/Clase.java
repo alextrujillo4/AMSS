@@ -1,20 +1,22 @@
 package sample.Objects;
 
 import java.awt.*;
+import java.util.ArrayList;
 
-public class Reactivo {
+public class Clase {
 
     private int id;
     private String name;
     private String grupo;
     private Image image;
+    private ArrayList<String> temas;
 
 
-    public Reactivo(){
+    public Clase(){
 
     }
 
-    public Reactivo(String name){
+    public Clase(String name){
         this.name = name;
     }
     public int getId() {
@@ -47,5 +49,16 @@ public class Reactivo {
 
     public void setImage(Image image) {
         this.image = image;
+    }
+
+    public ArrayList<String> getTemas() {
+        return temas;
+    }
+
+    public void setTemas(ArrayList<String> temas) {
+        this.temas = temas;
+    }
+    public void addTema(String tema) {
+        temas.add(tema);
     }
 }

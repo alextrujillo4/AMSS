@@ -7,7 +7,7 @@ public class Clase {
 
     private int id;
     private String name;
-    private Image image;
+    private String imageUrl;
     private ArrayList<String> temas;
 
 
@@ -15,9 +15,9 @@ public class Clase {
 
     }
 
-    public Clase(String name,Image image, ArrayList<String>  temas){
+    public Clase(String name,String imageUrl, ArrayList<String>  temas){
         this.name = name;
-        this.image = image;
+        this.imageUrl = imageUrl;
     }
 
     public Clase(String name, ArrayList<String>  temas){
@@ -43,13 +43,12 @@ public class Clase {
         this.name = name;
     }
 
-
-    public Image getImage() {
-        return image;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImage(Image image) {
-        this.image = image;
+    public void setImage(String  imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public ArrayList<String> getTemas() {

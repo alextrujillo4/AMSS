@@ -16,7 +16,7 @@
             <Font name="Google Sans Medium" size="21.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="nombreClase_ET" cache="true" layoutX="70.0" layoutY="86.0" prefHeight="27.0" prefWidth="186.0" promptText="Nombre de Clase">
+      <JFXTextField fx:id="nombreClase_ET" cache="true" layoutX="70.0" layoutY="86.0" prefHeight="27.0" prefWidth="186.0" promptText="Nombre de Clase" unFocusColor="BLACK">
          <font>
             <Font name="Google Sans" size="13.0" />
          </font></JFXTextField>

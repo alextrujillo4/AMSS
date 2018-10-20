@@ -68,7 +68,6 @@ public class MainScene implements Initializable {
             e.printStackTrace();
         }
         Stage stage = new Stage();
-        stage.initModality(Modality.WINDOW_MODAL);
         stage.setTitle("");
         stage.setScene(new Scene(root1, 300, 400));
         stage.setResizable(false);
@@ -91,7 +90,6 @@ public class MainScene implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         for (int i = 0; i<4; i++){
-
 
             Label lbl = new Label ("Item " + i);
             //lbl.setGraphic(new ImageView(new Image(new FileInputStream("/Users/alextrujillo/Desktop/h.png"))));

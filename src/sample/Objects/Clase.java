@@ -7,7 +7,6 @@ public class Clase {
 
     private int id;
     private String name;
-    private String grupo;
     private Image image;
     private ArrayList<String> temas;
 
@@ -16,9 +15,18 @@ public class Clase {
 
     }
 
-    public Clase(String name){
+    public Clase(String name,Image image, ArrayList<String>  temas){
         this.name = name;
+        this.image = image;
     }
+
+    public Clase(String name, ArrayList<String>  temas){
+        this.name = name;
+        this.temas = temas;
+    }
+
+
+
     public int getId() {
         return id;
     }
@@ -35,13 +43,6 @@ public class Clase {
         this.name = name;
     }
 
-    public String getGrupo() {
-        return grupo;
-    }
-
-    public void setGrupo(String grupo) {
-        this.grupo = grupo;
-    }
 
     public Image getImage() {
         return image;

@@ -6,22 +6,27 @@ import com.jfoenix.controls.JFXTabPane;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ClasesScene implements Initializable {
+public class MainScene implements Initializable {
 
 
     @FXML
@@ -54,6 +59,20 @@ public class ClasesScene implements Initializable {
     @FXML
     void agregarClase(ActionEvent event) {
 
+        FXMLLoader fxmlLoader = new
+                FXMLLoader(getClass().getResource("Dialogs/DialogClase.fxml"));
+        Parent root1 = null;
+        try {
+            root1 = (Parent) fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Stage stage = new Stage();
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.setTitle("");
+        stage.setScene(new Scene(root1, 300, 400));
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
@@ -74,9 +93,9 @@ public class ClasesScene implements Initializable {
         for (int i = 0; i<4; i++){
 
 
-                Label lbl = new Label ("Item " + i);
-                //lbl.setGraphic(new ImageView(new Image(new FileInputStream("/Users/alextrujillo/Desktop/h.png"))));
-                clasesList_listview.getItems().add(lbl);
+            Label lbl = new Label ("Item " + i);
+            //lbl.setGraphic(new ImageView(new Image(new FileInputStream("/Users/alextrujillo/Desktop/h.png"))));
+            clasesList_listview.getItems().add(lbl);
 
         }
     }

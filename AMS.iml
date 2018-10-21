@@ -9,6 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="jfoenix-9.0.6" level="project" />
     <orderEntry type="library" exported="" name="Enzo-0.3.6" level="project" />
-    <orderEntry type="library" exported="" name="sqlite-jdbc-3.23.1" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.12" level="project" />
   </component>
 </module>

@@ -22,7 +22,7 @@
          </font></JFXTextField>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="25.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="file:/Users/alextrujillo/Desktop/AMS/icons/notes.png" />
+            <Image url="@notes.png" />
          </image>
       </ImageView>
       <JFXButton fx:id="agregarImagen_BTN" cache="true" ellipsisString="" layoutX="70.0" layoutY="140.0" onAction="#AgregarImagenOnAction" prefHeight="28.0" prefWidth="186.0" ripplerFill="#0022ff" style="-fx-background-color: #ddd;" text="Agregar Imagen" textAlignment="CENTER" textFill="#0022ff" textOverrun="WORD_ELLIPSIS">
@@ -38,7 +38,7 @@
       </JFXButton>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="25.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="file:/Users/alextrujillo/Desktop/AMS/icons/photo.png" />
+            <Image url="photo.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="25.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
@@ -51,6 +51,6 @@
             <Font name="Google Sans Medium" size="13.0" />
          </font>
       </JFXButton>
-      <JFXListView fx:id="temasList_LV" layoutX="63.0" layoutY="256.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #eee;" />
+      <JFXListView fx:id="temasList_LV" layoutX="63.0" layoutY="256.0" maxHeight="100.0" maxWidth="200.0" minHeight="1.0" minWidth="200.0" style="-fx-background-color: #eee;" />
    </children>
 </AnchorPane>

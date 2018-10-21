@@ -2,12 +2,14 @@ package sample;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
+import com.jfoenix.controls.JFXPopup;
 import com.jfoenix.controls.JFXTabPane;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,7 +18,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -40,6 +44,8 @@ public class MainScene implements Initializable {
 
     @FXML
     private Tab clasestab_tab;
+
+
 
     @FXML
     private JFXListView<Label> clasesList_listview;
@@ -86,6 +92,7 @@ public class MainScene implements Initializable {
 
 
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -96,5 +103,8 @@ public class MainScene implements Initializable {
             clasesList_listview.getItems().add(lbl);
 
         }
+
     }
+
+
 }

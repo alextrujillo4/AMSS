@@ -1,18 +1,27 @@
 package sample.Dialogs;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXListView;
-import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.*;
 import com.jfoenix.validation.RequiredFieldValidator;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
+import javafx.stage.Popup;
 import sample.Objects.Clase;
 
 import java.awt.*;
@@ -54,9 +63,11 @@ public class DialogClase implements Initializable  {
         if (!agregarTema_ET.getText().equals("")){
             temasList_LV.getItems().add(agregarTema_ET.getText());
             agregarTema_ET.setText("");
-        }
-
+        };
     }
+
+
+
 
 
 
@@ -103,8 +114,33 @@ public class DialogClase implements Initializable  {
         });
     }
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         validateFields();
+        temasList_LV.setDisable(false);
+            temasList_LV.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    ContextMenu contextMenu = new ContextMenu();
+                    MenuItem editItem = new MenuItem("Editar");
+                    MenuItem deleteItem = new MenuItem("Delete");
+                    contextMenu.getItems().addAll(editItem,new SeparatorMenuItem(), deleteItem);
+                    //Getting selecter item
+                    int index = temasList_LV.getSelectionModel().getSelectedIndex();
+
+                    if (index >= 0){
+                        System.out.println("This: " + index);
+                        temasList_LV.setContextMenu(contextMenu);
+                    }
+
+
+                }
+            });
+
+
     }
+
+
 }

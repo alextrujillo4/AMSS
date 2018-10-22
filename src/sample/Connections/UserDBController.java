@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class UserDBController {
     private static String tblName = "usuarios";
     public static int create(String username, String password) {
-        int usr_id=-1;git bashh
+        int usr_id=-1;
 
         Connection conn = ConnectionManager.getConnection();
 

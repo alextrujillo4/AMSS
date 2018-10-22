@@ -38,7 +38,7 @@
       </JFXButton>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="25.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="file:/Users/alextrujillo/Desktop/AMS/icons/photo.png" />
+            <Image url="photo.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="25.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
